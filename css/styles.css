@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&display=swap');
+
+body {
+	background: black;
+	color: white;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 1.4em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/*height: 100vh;*/
+
+	/* mobile viewport bug fix */
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+}
+
+html {
+	height: -webkit-fill-available;
+}
+
+p, a {
+	margin: 0;
+	line-height: 1.5em;
+}
+
+p::selection, a::selection {
+	background: #ffe600;
+}
+
+a {
+	width: fit-content;
+	display: block;
+	text-decoration: none;
+	color: gray;
+	overflow: hidden;
+	background: linear-gradient(to right, pink, pink 50%, gray 50%);
+
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 200ms ease ;
+	transition-delay: 100ms;
+}
+
+a:hover {
+	color: pink;
+	background-position: 0 100%;
+}
+
+.header, .links , .footer {
+	padding: 2em 1em;
+}
+
+.links {
+	flex: 1;
+}
+
+.footer {
+	color: gray;
+}
+
+@media only screen and (max-height: 560px) and (orientation: landscape) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .header {
+  	flex: 1;
+  }
+
+  .links {
+  	flex: 0;
+  }
+
+  .footer {
+  	flex-basis: 100%;
+  	align-self: flex-end;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: 1.2em;
+	}
+
+} 
