@@ -4,10 +4,11 @@ body {
 	background: black;
 	color: white;
 	font-family: 'IBM Plex Mono', monospace;
-	font-size: 1.4em;
+	font-size: 1em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin: 0 !important;
 	/*height: 100vh;*/
 
 	/* mobile viewport bug fix */
@@ -51,7 +52,7 @@ a:hover {
 }
 
 .header, .links , .footer {
-	padding: 2em 1em;
+	padding: 2em 2em;
 }
 
 .links {
@@ -84,7 +85,7 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
 	body {
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 
 } 
